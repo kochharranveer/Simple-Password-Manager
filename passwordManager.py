@@ -67,8 +67,4 @@ def SelectMode (addCountLocal) :
     else :
         invalidCode(addCountLocal)
 
-<<<<<<< HEAD
 SelectMode (addCount)
-=======
-SelectMode ()
->>>>>>> 22b6fcfe25c929ea432df89f33a86bcd44be50a3
