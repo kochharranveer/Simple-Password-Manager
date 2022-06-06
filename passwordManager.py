@@ -22,7 +22,7 @@ def add () :
     file.write (EmailUsername)
     file.write (" ")
     file.write (Password)
-    file.write (" ")
+    file.write ("\n")
 
     file.close ()
 
