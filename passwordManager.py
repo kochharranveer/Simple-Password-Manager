@@ -1,8 +1,7 @@
-addCount = 0
+file = open("passwordTextFile.txt","a")
+file.close ()
 
-def view (addCountLocal) :
-
-    if addCountLocal >= 1 :
+def view () :
 
         file = open ("passwordTextFile.txt","r")
     
@@ -14,16 +13,9 @@ def view (addCountLocal) :
 
         file.close ()
 
-        SelectMode(addCountLocal)
-    
-    else :
+        SelectMode()
 
-        print()
-        print ("You haven't added anything yet !")
-        print()
-        SelectMode(addCountLocal)
-
-def add (addCountLocal) :
+def add () :
 
     file = open ("passwordTextFile.txt","a")
 
@@ -40,31 +32,30 @@ def add (addCountLocal) :
     print ()
     print ("Added !")
 
-    SelectMode (addCountLocal)
+    SelectMode ()
 
-def invalidCode (addCountLocal) :
+def invalidCode () :
 
     print ("You entered an invalid code as a mode !")
     
-    SelectMode (addCountLocal)
+    SelectMode ()
 
-def SelectMode (addCountLocal) :
+def SelectMode () :
 
     print ()
     Mode = input ("Enter view if you want to view your passwords,\nadd if you want to add a new password\nand exit if you want to quit the program : ")
     print ()
 
     if Mode == "view" :
-        view(addCountLocal)
+        view()
 
     if Mode == "add" :
-        addCountLocal += 1
-        add(addCountLocal)
+        add()
 
     elif Mode == "exit" :
         quit()
     
     else :
-        invalidCode(addCountLocal)
+        invalidCode()
 
-SelectMode (addCount)
+SelectMode ()
